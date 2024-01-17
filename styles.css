@@ -212,7 +212,7 @@ nav > ul li:hover .sous{
     height: 10%;
     width:100%;
     position:absolute;
-    bottom:-1500px;    /* pour bouger l'océan */
+    bottom:-1000px;    /* pour bouger l'océan */
     left:0;
     background: #015871;
 }
