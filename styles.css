@@ -1,4 +1,8 @@
 <link rel="stylesheet" type="text/html" href="index.html">
+html{
+    background-color: rgb(245, 231, 231); 
+}
+
 body{
     background-color: rgb(245, 231, 231);
 }
