@@ -21,6 +21,13 @@ U{
     text-decoration-color: grey;
     text-decoration-style: dotted;
 }
+/* block */
+section{
+    margin: 8%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(173, 216, 230);
+}
 
 h2{
     text-align: center;
@@ -31,7 +38,7 @@ h4{
     font-size: larger;
 }
 .blue{
-    background-color: rgb(173, 216, 230);
+    background-color: rgb(173, 188, 230);
     width: auto;
     text-align: center;
     margin: left;
