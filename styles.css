@@ -5,7 +5,62 @@ html{
 
 body{
     background-color: rgb(245, 231, 231);
+    cursor: url("click.png"), pointer;
 }
+
+.accueil {
+    transition : 1s cubic-bezier(0.77, 0.01, 0.49, 1.51);
+}
+.accueil :hover {
+    scale : 2;
+}
+@keyframes cubic{       /* animation bouge */
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.emoji{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 110px;
+    animation: waving-hand 3.5s infinite;
+    transform-origin: 70% 70%;
+}
+@keyframes waving-hand{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(14deg);
+    }
+    20%{
+        transform: rotate(-8deg);
+    }
+    30%{
+        transform: rotate(14deg);
+    }
+    40%{
+        transform: rotate(-4.0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
 header{
     background-image: url(japon.png);
     background-position: center;
@@ -57,37 +112,38 @@ h4{
 }
 
 h1{
-    color: grey;
-    text-align: center;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-name: slidein;
+    position: relative;
+    color: rgb(245, 231, 231);
+    font-size: 10vw;
+    -webkit-text-stroke: 0.2vw rgb(245, 231, 231);
+    text-transform: uppercase;
 }
-@keyframes slidein{       /* animation bouge */
-    from{
-        margin-left: 100%;
-        width: 300%;
+h1::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(173, 188, 230);
+    -webkit-text-stroke: 0vw rgb(75, 75, 75);
+    border-right: 2px solid rgb(173, 188, 230);
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate
+{
+    0%, 10%, 100%
+    {
+        width: 0;
     }
-    to{
-        margin-left: 0%;
-        width: 100%;
+    70%, 98%
+    {
+        width: 67%;
     }
 }
 
-.accueil{
-    animation-duration: 3s;
-    animation-name: rig;
-}
-@keyframes rig{       /* animation bouge */
-    from{
-        margin-right: 100%;
-        width: 300%;
-    }
-    to{
-        margin-right: 0%;
-        width: 100%;
-    }
-}
 .propos{
     animation-duration: 4s;
     animation-name: rig;
@@ -182,7 +238,7 @@ nav a{    /* barre déroulante bleu */
 nav a:hover{
     color: rgb(132, 0, 255);
     border-bottom: 2px solid rgb(238, 218, 104);
-    cursor: url("cursor.png"), pointer;  /* souris */
+    cursor: url("clicker.png"), pointer;  /* souris */
 }
 .sous{
     display: none;
@@ -219,11 +275,12 @@ nav > ul li:hover .sous{
 
 /*  */
 /* animation de la vague */
+/*
 .ocean { 
     height: 10%;
     width:100%;
     position:absolute;
-    bottom:-1500px;    /* pour bouger l'océan */
+    bottom:-1500px;    pour bouger l'océan 
     left:0;
     background: #015871;
 }
@@ -257,3 +314,4 @@ nav > ul li:hover .sous{
       transform: translate3d(0,5px,0);
     }
 }
+*/
