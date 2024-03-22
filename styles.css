@@ -6,6 +6,7 @@ html{
 body{
     background-color: rgb(245, 231, 231);
     cursor: url("click.png"), pointer;
+    text-size-adjust: 500px;
 }
 
 .accueil {
@@ -94,7 +95,7 @@ h2{
 }
 h4{
     color: rgb(77, 77, 77);
-    font-size: larger;
+    font-size:larger;
 }
 .blue{
     background-color: rgb(173, 188, 230);
@@ -315,3 +316,27 @@ nav > ul li:hover .sous{
     }
 }
 */
+ .container{
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box{
+    width: 250px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, .1);
+    transition: 1s;
+}
+.box img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.box:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    cursor: url("clicker.png"), pointer;  /* souris */
+}
