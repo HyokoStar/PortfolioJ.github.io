@@ -98,18 +98,23 @@ h4{
     font-size:larger;
 }
 .blue{
-    background-color: rgb(173, 188, 230);
     width: auto;
-    text-align: center;
+    text-align: right;
     margin: left;
-    color: rgb(141, 38, 38);
+    color: rgb(87, 6, 6);
+}
+.green{
+    width: auto;
+    text-align: left;
+    margin: left;
+    color: rgb(87, 6, 6);
 }
 .pink{
     background-color: rgb(173, 188, 230);
     width: auto;
     text-align: center;
     margin: left;
-    color: rgb(141, 38, 38);
+    color: rgb(87, 6, 6);
 }
 
 h1{
